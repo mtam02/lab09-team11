@@ -27,15 +27,24 @@ p { margin-top: 0; }
 	overflow: auto;
 }
 
+.main-menu {
+	background-color: rgba(34,34,34,0.9);
+}
+
 .main-menu a {
 	margin: 15px;
-	padding: 0; 
+	padding: 0;
+	color: #fff;
+}
+
+.main-menu a:hover {
+	color: #6bf;
 }
 
 /*	****************************************
 	State
 	**************************************** */
-.active, .active2 {
-	color: black;
-	font-weight: bold;
+.active > a {
+	opacity: .65;
+	pointer-events: none;
 }

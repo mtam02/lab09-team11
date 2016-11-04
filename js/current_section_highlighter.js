@@ -4,10 +4,6 @@ $(document).ready(function(){
 		$('nav li a[href="#first"]').closest('li').addClass('active').siblings().removeClass('active');
 	}
 
-	$('nav li a').click(function() {
-		$(this).closest('li').addClass('active').siblings().removeClass('active');
-	});
-
 	$(window).scroll(function() {
 		if ($(window).scrollTop() === 0) {
 			$('nav li a[href="#first"]').closest('li').addClass('active').siblings().removeClass('active');
@@ -19,5 +15,9 @@ $(document).ready(function(){
 			}
 		});
 	});
+
+	/*$('nav li a').click(function() {
+		$(this).closest('li').addClass('active').siblings().removeClass('active');
+	});*/
 	
 });
