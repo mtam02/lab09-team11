@@ -10,7 +10,7 @@ $(document).ready(function(){
 		}
 
 		$('section').each(function() {
-			if ($(window).scrollTop() >= $(this).offset().top - $(".main-menu").height()) {
+			if ($(window).scrollTop() >= $(this).offset().top - $(".navbar navbar-inverse navbar-fixed-top").height()) {
 				$('nav li a[href="#' + $(this).attr('id') + '"]').closest('li').addClass('active').siblings().removeClass('active');
 			}
 		});

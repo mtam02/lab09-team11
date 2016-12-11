@@ -1,50 +1,384 @@
 /*	****************************************
-	Demo styles (for demo purposes only)
+	Base
 	**************************************** */
-p { margin-top: 0; }
 
-.right {
-	float: right;
-	margin-left: 15px;
+body {
+	color: #0068b6;
+	font-family: "Britannic Medium", sans-serif;
 }
 
-.frame {
-	border: 1px solid #666;
-	padding: 5px;
+h1, h1 > a {
+	text-transform: uppercase;
+	font-family: "Britannic Bold", sans-serif;
+	margin-top: 0;
+	margin-left: 7.5px;
+	letter-spacing: .08em;
 }
+
+h2 {
+	font-family: "Britannic D Ultra", sans-serif;
+	font-size: 34px;
+	padding-top: 10px;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+}
+
+h3 {
+	color: #c90000;
+	font-family: "Britannic Medium", sans-serif;
+	font-size: 30px;
+}
+
+h4, h4 > a {
+	color: #fc7104;
+	font-size: 26px;
+}
+
+p, li {
+	margin-top: 0;
+	font-size: 19px;
+}
+
+ul, ol {
+	padding-left: 20px;
+}
+
+a {
+	font-size: 18px;
+	font-family: "Gentium Book Basic", serif;
+}
+
+a:focus {
+	color: rgba(255,255,255,1);
+	text-decoration: none;
+}
+
+a:hover {
+	color: rgba(255,255,255,0.6);
+	text-decoration: none;
+}
+
+h4 > a:focus {
+	color: #fc7104;
+	text-decoration: none;
+}
+
+h4 > a:hover {
+	color: #714f02;
+	text-decoration: none;
+}
+
+section {
+	height: calc(100vh + 14px);
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	max-height: 720px;
+	min-height: 420px;
+	padding: 0;
+}
+
+section:nth-child(even) {
+	background: none;
+}
+
+footer {
+	padding-top: 75px;
+}
+
+@media only screen and (min-width: 768px) {
+
+	h1 {
+		margin-left: 0px;
+	}
+
+	h2 {
+		padding-top: 15px;
+		font-size: 40px;
+	}
+
+	h3 {
+		font-size: 36px;
+	}
+
+	h4, h4 > a {
+		font-size: 32px;
+	}
+
+	p, li {
+		font-size: 20px;
+	}
+
+	ul, ol {
+		padding-left: 21px;
+	}
+
+	section {
+		height: calc(100vh);
+		max-height: 960px;
+		min-height: 640px;
+	}
+
+}
+
+@media only screen and (min-width: 992px) {
+
+	h2 {
+		padding-top: 20px;
+		font-size: 44px;
+	}
+
+	h3 {
+		font-size: 40px;
+	}
+
+	h4, h4 > a {
+		font-size: 36px;
+	}
+
+	p, li {
+		font-size: 21px;
+	}
+
+	ul, ol {
+		padding-left: 22px;
+	}
+
+	section {
+		max-height: 100%;
+		min-height: 642px;
+	}
+
+}
+
 
 /*	****************************************
-	Modules (reusable classes)
+	Modules
 	**************************************** */
+
 .container {
 	margin: 0 auto;
+	max-width: 960px;
+}
+
+.gallery {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	height: 100%;
+}
+
+.gallery-slide-wrapper {
+	height: 100%;
+}
+
+.gallery-item {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.gallery-item-content {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: auto;
+	width: auto;
+	z-index: 1000;
+	text-align: center;
+}
+
+.has-center-content {
+	height: 60%;
+	width: 100%;
+	padding-top: 58px;
+	box-sizing: border-box;
+	display: table;
+	position: absolute;
+}
+
+.center-content {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.center-content-container {
+	margin: 0 auto;
 	width: 95%;
-	max-width: 960px; 
+	max-width: 570px;
 }
 
-.content {
-	text-align: left;
-	overflow: auto;
+.gallery-image {
+	position: absolute;
+	z-index: 1;
 }
 
-.main-menu {
-	background-color: rgba(34,34,34,0.9);
+.gallery-image-doraemon {
+ 	background-image: url("../images/dora.png");
+ 	width: auto;
+ 	height: auto;
+ 	top: 60%;
+ 	bottom: 0;
+ 	left: 0;
+ 	right: 0;
+ 	background-size: auto 100%;
+ 	background-position: top center;
+	background-repeat: no-repeat;
 }
 
-.main-menu a {
-	margin: 15px;
-	padding: 0;
-	color: #fff;
+.homepage-headline {
+	margin-top: 7px;
+	margin-bottom: 0;
+	line-height: 1;
+	letter-spacing: 0em;
 }
 
-.main-menu a:hover {
-	color: #6bf;
+#first {
+	background: linear-gradient(rgba(255,255,255,0.9), rgba(240,240,240,0.9));;
 }
+
+#second {
+	background: linear-gradient(rgba(252,246,0,0.9), rgba(231,172,0,0.9));
+}
+
+.navbar-inverse {
+	background: linear-gradient(rgba(94,179,227,0.9), rgba(22,122,193,0.9));
+	border-color: #c90000;
+	border-bottom-width: 3px;
+}
+
+.navbar-inverse .navbar-toggle {
+	border: none;
+	margin-right: 5px;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+	background-color: transparent;
+}
+
+.navbar-inverse .navbar-toggle:focus .icon-bar {
+	background-color: rgba(255,255,255,1);
+}
+
+.navbar-inverse .navbar-toggle:hover .icon-bar {
+	background-color: rgba(255,255,255,0.6);
+}
+
+.navbar-inverse .navbar-brand {
+	padding: 0px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 0;
+	color: white;
+	font-size: 26px;
+}
+
+.navbar-inverse .navbar-brand:focus {
+	color: rgba(255,255,255,1);
+}
+
+.navbar-inverse .navbar-brand:hover {
+	color: rgba(255,255,255,0.6);
+}
+
+.navbar-inverse .navbar-brand > img {
+	height: 45px;
+	width: 119px;
+	margin-left: 15px;
+	padding: 5px 10px 5px 0;
+}
+
+.navbar-inverse .navbar-brand:focus > img {
+	opacity: 1;
+}
+
+.navbar-inverse .navbar-brand:hover > img {
+	opacity: 0.6;
+}
+
+.navbar-inverse .navbar-nav > li > a  {
+	color: white;
+	text-align: right;
+	padding-right: 16px;
+	font-size: 24px;
+}
+
+.navbar-inverse .navbar-nav > li > a:focus {
+	color: rgba(255,255,255,1);
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+	color: rgba(255,255,255,0.6);
+}
+
+.navbar-inverse div.navbar-collapse {
+    border-top: none;
+    box-shadow: none;
+}
+
+.navbar-inverse .navbar-nav {
+	margin-top: 0;
+}
+
+@media only screen and (min-width: 768px) {
+
+	.has-center-content {
+		height: 46%;
+	}
+
+	.center-content-container {
+		width: 100%;
+		max-width: initial;
+		width: 700px;
+	}
+
+	.gallery-image-doraemon {
+		top: 46%;
+	}
+
+	.homepage-headline {
+		margin-top: 6px;
+	}
+
+	.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+		margin-left: 0;
+	}
+
+}
+
+@media only screen and (min-width: 992px) {
+	
+	.has-center-content {
+		height: 45%;
+		padding-top: 54px;
+	}
+
+	.center-content-container {
+		width: 760px;
+	}
+
+	.gallery-image-doraemon {
+		top: 45%;
+	}
+
+}
+
 
 /*	****************************************
 	State
 	**************************************** */
-.active > a {
-	opacity: .65;
+	
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
+	background: none;
+	opacity: 0.65;
 	pointer-events: none;
 }
