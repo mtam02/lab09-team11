@@ -13,6 +13,7 @@ h1, h1 > a {
 	margin-top: 0;
 	margin-left: 7.5px;
 	letter-spacing: .08em;
+	text-shadow: 2px 4px 3px rgba(0,104,182,0.9), 2px 4px 3px rgba(0,104,182,0.9);
 }
 
 h2 {
@@ -21,7 +22,7 @@ h2 {
 	padding-top: 10px;
 	margin-top: 0px;
 	margin-bottom: 5px;
-	letter-spacing: .1em;
+	letter-spacing: .08em;
 	text-transform: uppercase;
 }
 
@@ -33,7 +34,8 @@ h3 {
 
 h4, h4 > a {
 	color: #fc7104;
-	font-size: 26px;
+	font-size: 29px;
+	margin-top: 6px;
 }
 
 p, li {
@@ -66,8 +68,9 @@ h4 > a:focus {
 }
 
 h4 > a:hover {
-	color: #714f02;
+	color: #fc7104;
 	text-decoration: none;
+	text-decoration: underline;
 }
 
 section {
@@ -104,7 +107,8 @@ footer {
 	}
 
 	h4, h4 > a {
-		font-size: 32px;
+		font-size: 35px;
+		margin-top: 7px;
 	}
 
 	p, li {
@@ -135,7 +139,8 @@ footer {
 	}
 
 	h4, h4 > a {
-		font-size: 36px;
+		font-size: 39px;
+		margin-top: 8px;
 	}
 
 	p, li {
@@ -229,27 +234,43 @@ footer {
  	left: 0;
  	right: 0;
  	background-size: auto 100%;
- 	background-position: top center;
+ 	background-position: center top;
 	background-repeat: no-repeat;
 }
 
 .homepage-headline {
-	margin-top: 7px;
+	margin-top: 6px;
 	margin-bottom: 0;
 	line-height: 1;
 	letter-spacing: 0em;
 }
 
-#first {
-	background: linear-gradient(rgba(255,255,255,0.9), rgba(240,240,240,0.9));;
+#overview {
+	background-image: url("../images/bg.png");
+	background-size: cover;
+ 	background-position: center top;
+	background-repeat: no-repeat;
+	/*background: linear-gradient(rgba(255,255,255,0.9), rgba(240,240,240,0.9));*/
 }
 
-#second {
-	background: linear-gradient(rgba(252,246,0,0.9), rgba(231,172,0,0.9));
+#facts {
+	background-image: url("../images/bg6.jpg");
+	background-size: cover;
+ 	background-position: center top;
+	background-repeat: no-repeat;
+	/*background: linear-gradient(rgba(252,246,0,0.9), rgba(231,172,0,0.9));*/
+}
+
+#colophon {
+	background-image: url("../images/bg3.jpg");
+	background-size: cover;
+ 	background-position: center top;
+	background-repeat: no-repeat;
+	/*background: linear-gradient(rgba(252,246,0,0.9), rgba(231,172,0,0.9));*/
 }
 
 .navbar-inverse {
-	background: linear-gradient(rgba(94,179,227,0.9), rgba(22,122,193,0.9));
+	background: linear-gradient(rgba(94,179,227,0.95), rgba(22,122,193,0.95));
 	border-color: #c90000;
 	border-bottom-width: 3px;
 }
@@ -261,14 +282,19 @@ footer {
 
 .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
 	background-color: transparent;
+	box-shadow: none;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+	box-shadow: 2px 4px 3px rgba(0,104,182,0.9), 2px 4px 3px rgba(0,104,182,0.9);
 }
 
 .navbar-inverse .navbar-toggle:focus .icon-bar {
-	background-color: rgba(255,255,255,1);
+	background-color: #fff;
 }
 
 .navbar-inverse .navbar-toggle:hover .icon-bar {
-	background-color: rgba(255,255,255,0.6);
+	background-color: rgb(252,246,0);
 }
 
 .navbar-inverse .navbar-brand {
@@ -276,7 +302,7 @@ footer {
 	display: flex;
 	align-items: center;
 	margin-bottom: 0;
-	color: white;
+	color: #fff;
 	font-size: 26px;
 }
 
@@ -285,7 +311,8 @@ footer {
 }
 
 .navbar-inverse .navbar-brand:hover {
-	color: rgba(255,255,255,0.6);
+	color: rgb(252,246,0);
+	text-shadow: 2px 4px 3px rgba(0,104,182,0.9), 2px 4px 3px rgba(0,104,182,0.9);
 }
 
 .navbar-inverse .navbar-brand > img {
@@ -304,18 +331,20 @@ footer {
 }
 
 .navbar-inverse .navbar-nav > li > a  {
-	color: white;
+	color: #fff;
+	text-shadow: 2px 4px 3px rgba(0,104,182,0.9), 2px 4px 3px rgba(0,104,182,0.9);
 	text-align: right;
 	padding-right: 16px;
 	font-size: 24px;
+	font-weight: bold;
 }
 
 .navbar-inverse .navbar-nav > li > a:focus {
-	color: rgba(255,255,255,1);
+	color: #fff;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover {
-	color: rgba(255,255,255,0.6);
+	color: rgb(252,246,0);
 }
 
 .navbar-inverse div.navbar-collapse {
@@ -344,7 +373,7 @@ footer {
 	}
 
 	.homepage-headline {
-		margin-top: 6px;
+		margin-top: 7px;
 	}
 
 	.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
@@ -379,6 +408,7 @@ footer {
 .navbar-inverse .navbar-nav > .active > a:focus,
 .navbar-inverse .navbar-nav > .active > a:hover {
 	background: none;
-	opacity: 0.65;
+	color: rgb(252,246,0);
+	text-shadow: 2px 4px 3px rgba(0,104,182,0.9), 2px 4px 3px rgba(0,104,182,0.9);
 	pointer-events: none;
 }
