@@ -346,6 +346,7 @@ footer {
 
 #colophon h2 {
 	color: #fff;
+	text-shadow: 2px 4px 3px rgba(40,40,40,0.9), 2px 4px 3px rgba(40,40,40,0.9);
 	padding-top: 0;
 }
 
