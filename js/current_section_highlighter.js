@@ -15,9 +15,5 @@ $(document).ready(function(){
 			}
 		});
 	});
-
-	/*$('nav li a').click(function() {
-		$(this).closest('li').addClass('active').siblings().removeClass('active');
-	});*/
 	
 });
