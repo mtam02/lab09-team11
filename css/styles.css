@@ -84,7 +84,11 @@ section {
 }
 
 footer {
-	padding-top: 75px;
+	padding-top: 15px;
+	background-image: url("../images/overview.png");
+	background-size: cover;
+ 	background-position: center top;
+	background-repeat: no-repeat;
 }
 
 @media only screen and (min-width: 768px) {
@@ -216,29 +220,59 @@ footer {
 	max-width: 570px;
 }
 
-.facts-content-container {
+.overlay-content-container {
 	background: rgba(255,255,255,0.9);
+	border-radius: 15px;
 }
 
-.facts-content {
-	border: 20px solid transparent;
+.overlay-content-container > h2 {
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+
+.overlay-content {
+	border-left-width: 15px;
+	border-right-width: 15px;
+	border-top-width: 0px;
+	border-bottom-width: 0px; 
+	border-style: solid;
+	border-color: transparent;
 	overflow-y: auto;
 }
 
-.facts-content > h2 {
-	padding: 0;
+.overlay-content-container {
+	height: calc(100vh + 14px - 85px);
+	max-height: 720px;
+	min-height: calc(420px - 85px);
+	margin-top: 70px;
 }
 
-.facts-content > h3, .facts-content > p {
+ .overlay-content {
+ 	height: calc(100vh + 14px - 153px - 15px);
+	max-height: 720px;
+	min-height: calc(420px - 153px - 15px);
+	margin-top: 0;
+ }
+
+.facts {
+	display: block;
+}
+
+.facts-img > img {
+	width: 100%;
+	max-width: 150px;
+	height: auto;
+	margin-top: 15px;
+}
+
+.facts-text > h3, .facts-text > p {
 	text-align: left;
 }
 
-.facts-content-container, .facts-content {
-	height: calc(100vh + 14px - 100px);
-	max-height: 720px;
-	min-height: calc(420px - 100px);
-	margin-top: 75px;
+.facts:nth-of-type(1) img {
+	margin-top: 0px;
 }
+
 
 .gallery-image {
 	position: absolute;
@@ -246,7 +280,7 @@ footer {
 }
 
 .gallery-image-doraemon {
- 	background-image: url("../images/dora.png");
+ 	background-image: url("../images/halfdora.png");
  	width: auto;
  	height: auto;
  	top: 60%;
@@ -266,27 +300,24 @@ footer {
 }
 
 #overview {
-	background-image: url("../images/bg.png");
+	background-image: url("../images/overview.png");
 	background-size: cover;
  	background-position: center top;
 	background-repeat: no-repeat;
-	/*background: linear-gradient(rgba(255,255,255,0.9), rgba(240,240,240,0.9));*/
 }
 
 #facts {
-	background-image: url("../images/bg6.jpg");
+	background-image: url("../images/facts.jpg");
 	background-size: cover;
  	background-position: center top;
 	background-repeat: no-repeat;
-	/*background: linear-gradient(rgba(252,246,0,0.9), rgba(231,172,0,0.9));*/
 }
 
 #colophon {
-	background-image: url("../images/bg3.jpg");
+	background-image: url("../images/colophon.jpg");
 	background-size: cover;
  	background-position: center top;
 	background-repeat: no-repeat;
-	/*background: linear-gradient(rgba(252,246,0,0.9), rgba(231,172,0,0.9));*/
 }
 
 .navbar-inverse {
@@ -388,14 +419,44 @@ footer {
 		width: 700px;
 	}
 
-	.facts-content {
-		border: 27.5px solid transparent;
+	.overlay-content-container {
+		height: calc(100vh - 86.5px);
+		max-height: 960px;
+		min-height: calc(640px - 86.5px);
 	}
 
-	.facts-content-container, .facts-content {
-		height: calc(100vh - 100px);
+	.overlay-content-container > h2 {
+		padding-top: 20px;
+		padding-bottom: 12.5px;
+	}
+
+	.overlay-content {
+		border-left-width: 27.5px;
+		border-right-width: 27.5px;
+		height: calc(100vh - 168.5px - 17.5px);
 		max-height: 960px;
-		min-height: calc(640px - 100px);
+		min-height: calc(640px - 168.5px - 17.5px);
+	}
+
+	.facts {
+		display: flex;
+	}
+
+	.facts-img > img {
+		max-width: 175px;
+		margin-top: 25px;
+	}
+
+	.facts-text {
+		padding-left: 25px;
+	}
+
+	.facts:nth-of-type(1) h3 {
+		margin-top: 0px;
+	}
+
+	.facts:nth-of-type(1) img {
+		margin-top: 7.5px;
 	}
 
 	.gallery-image-doraemon {
@@ -423,13 +484,38 @@ footer {
 		width: 760px;
 	}
 
-	.facts-content {
-		border: 30px solid transparent;
+	.overlay-content-container {
+		max-height: calc(100% - 88px);
+		min-height: calc(642px - 88px);
 	}
 
-	.facts-content-container, .facts-content {
-		max-height: calc(100% - 100px);
-		min-height: calc(642px - 100px);
+	.overlay-content-container > h2 {
+		padding-top: 25px;
+		padding-bottom: 15px;
+	}
+
+	.overlay-content {
+		border-left-width: 30px;
+		border-right-width: 30px;
+		max-height: calc(100vh - 182px - 20px);
+		min-height: calc(642px - 182px - 20px);
+	}
+
+	.facts-img > img {
+		max-width: 200px;
+		margin-top: 25px;
+	}
+
+	.facts-text {
+		padding-left: 30px;
+	}
+
+	.facts:nth-of-type(1) h3 {
+		margin-top: 0px;
+	}
+
+	.facts:nth-of-type(1) img {
+		margin-top: 7.5px;
 	}
 
 	.gallery-image-doraemon {
